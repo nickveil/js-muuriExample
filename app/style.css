@@ -3,24 +3,67 @@ h1{
 	text-align: center;
 }
 
-.grid {
+.board {
   position: relative;
 }
-.item {
-  display: block;
+.board-col {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  z-index: 1;
-  background: #000;
-  color: #fff;
+  left:0;
+  right:0;
+  width:30%;
+  margin:0 1.5%;
+  background:#f0f0f0;
+  border-radius: 3px;
+  z-index:1;
 }
-.item.muuri-item-dragging {
+.board-col.muuri-item-dragging {
   z-index: 3;
+  cursor:move;
 }
-.item.muuri-item-releasing {
+.board-col.muuri-item-releasing {
   z-index: 2;
+}
+.board-col-header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  border-radius: 3px 3px 0 0;
+}
+.board-col-content {
+  position: relative;
+  border: 10px solid transparent;
+  min-height: 95px;
+}
+.board-team-member {
+  position: absolute;
+  width: 100%;
+  margin: 5px 0;
+}
+.board-team-member.muuri-item-releasing {
+  z-index: 9998;
+}
+.board-team-member.muuri-item-dragging {
+  z-index: 9999;
+  cursor: move;
+}
+.board-team-member.muuri-item-hidden {
+  z-index: 0;
+}
+.board-member-name {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
 }
 .item.muuri-item-hidden {
   z-index: 0;
