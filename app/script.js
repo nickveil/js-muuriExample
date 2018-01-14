@@ -2,6 +2,7 @@ var itemContainers = [].slice.call(document.querySelectorAll('.board-col-content
 var columnGrids = [];
 var boardGrid;
 
+/* Team member controls */
 itemContainers.forEach(function (container){
 	var grid = new Muuri(container,{
 		items: '.board-team-member',
@@ -33,6 +34,7 @@ itemContainers.forEach(function (container){
 		columnGrids.push(grid);
 });
 
+/* Column Control */
 boardGrid = new Muuri('.board', {
   layoutDuration: 400,
   layoutEasing: 'ease',
